@@ -5,6 +5,7 @@ public class User {
     public User(String username, String password) {
         this.username = username;
         this.password = password;
+        this.toDoItems = new ArrayList<>();
     }
 
     /**
@@ -35,5 +36,13 @@ public class User {
      */
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    /**
+     * Gets the to-do items of the user.
+     * @return A reference to the list of to-do items, which can be modified from outside the class.
+     */
+    public ArrayList<ToDoItem> getToDoItems() {
+        return toDoItems;
     }
 }
